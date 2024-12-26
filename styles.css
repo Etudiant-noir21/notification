@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --veryLightGray: hsl(210, 60%, 98%);
+    --lightGray: hsl(211, 68%, 94%);
+    --grayishBlue: hsl(205, 33%, 90%);
+    --darkGrayishBlue: hsl(219, 14%, 63%);
+    --veryDarkGrayishBlue: hsl(219, 12%, 42%);
+    --black: hsl(224, 21%, 14%);
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.container{
+    max-width: 700px;
+    width: 90%;
+    min-height: 100vh;
+    background-color: var(--white);
+    box-shadow: 3px 2px 5px 2px rgba(0, 0, 0, 0.089);
+    padding: 20px  40px;
+}
+
+header{
+    width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+header h1{  
+    color: var(--black);
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+header .title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .title span{
+    padding: 2px;
+    background-color: var(--blue);
+    border-radius: 20%;
+    color: var(--white);
+}
+
+header p{
+    color: var(--darkGrayishBlue);
+}
+
+.notification_card{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+     border-radius: 0.1rem;
+    padding: 5px;
+    /* line-height: 2; */
+}
+
+.unread{
+    background-color: var(--grayishBlue);
+    box-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.21);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#mark_as_read{
+cursor: pointer;
+}
+
+.notification_card img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification_card .description p{
+    color: var(--veryDarkGrayishBlue);
+}
+
+.description p strong{
+    color: var(--black);
+}
+ 
+.description p strong:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+.description span
+{
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.unread .description .ptRouge{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--red);
+    color: var(--red);
+}
+
+
+.description .durer{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.privatemsg{
+    /* border: 1px solid var(); */
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.03);
+    padding: 10px;
+    
+}
+
+.privatemsg :hover{
+    background-color: var(--darkGrayishBlue);
+    padding: 10px;
+    transition:  all 0.7s ease;
+    cursor: pointer;
+    color: var(--white);
+}
